@@ -50,8 +50,9 @@ def send():
     )
     grupo.click()
 
-
-    imagem =f'C:/Users/RT/Desktop/trabalhos/codigos em andamento/autoenvzap/{os.getenv("img")}'
+    caminho_atual = os.getcwd()
+    imagem =f'{caminho_atual}/{os.getenv("img")}'
+    
     btn_anexar = WebDriverWait(driver,30).until(
         EC.presence_of_element_located((By.XPATH, '//button[@aria-label="Anexar" and @data-tab="10"]'))
     )
